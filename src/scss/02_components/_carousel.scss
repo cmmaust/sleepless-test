@@ -1,0 +1,86 @@
+.carousel {
+  padding-top: 40px;
+
+  @media( min-width: $breakpoint-lg-min ) {
+    padding-top: 60px;
+  }
+
+  &__nav {
+    background-color: $color-primary;
+    border: none;
+    padding: 20px;
+    position: absolute;
+    top: 45%;
+    transition: all .2s ease;
+    z-index: 99;
+
+    @media( min-width: $breakpoint-md-min ) {
+      padding: 25px;
+      top: 39%;
+    }
+
+    @media( min-width: $breakpoint-lg-min ) {
+      top: 42%;
+    }
+
+    @media( min-width: $breakpoint-xl-min ) {
+      top: 45%;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 5px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    img {
+      width: 25px;
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+  }
+
+  &__slide {
+    img {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      width: 100%;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+
+      span {
+        display: block;
+        margin-top: 5px;
+
+        @media( min-width: $breakpoint-xl-min ) {
+          display: inline;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .swiper-notification {
+    @extend .sr-only;
+  }
+}

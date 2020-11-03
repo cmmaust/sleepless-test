@@ -1,0 +1,35 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../fonts/raleway/Raleway-Medium.woff2') format('woff2'),
+       url('../../fonts/raleway/Raleway-Medium.woff') format('woff'),
+       url('../../fonts/raleway/Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../fonts/raleway/Raleway-Bold.woff2') format('woff2'),
+       url('../../fonts/raleway/Raleway-Bold.woff') format('woff'),
+       url('../../fonts/raleway/Raleway-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Jomolhari';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../fonts/jomolhari/jomolhari-regular-webfont.woff2') format('woff2'),
+       url('../../fonts/jomolhari/jomolhari-regular-webfont.woff') format('woff'),
+       url('../../fonts/jomolhari/jomolhari-regular-webfont.ttf') format('truetype');
+}
+
+$raleway:   'Raleway', 'Arial', 'Helvetica', 'sans-serif';
+$jomolhari: 'Jomolhari', 'Time New Roman', 'serif';
+
+$font-primary:   $raleway;
+$font-secondary: $jomolhari;

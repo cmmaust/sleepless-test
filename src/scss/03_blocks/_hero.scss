@@ -1,0 +1,21 @@
+.hero {
+  max-height: 679px;
+  overflow: hidden;
+
+  &__carousel-item {
+    transition-property: opacity;
+
+    @media( min-width: 1470px ) {
+      min-height: 679px;
+    }
+  }
+
+  img {
+    @media( min-width: 1470px ) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+  }
+}

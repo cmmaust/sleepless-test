@@ -1,0 +1,224 @@
+.section {
+  &--quote {
+    background-color: $color-alt;
+    text-align: center;
+
+    blockquote {
+      margin: 0 auto;
+      max-width: 950px;
+
+      footer {
+        font-size: 12px;
+        padding-top: 30px;
+
+        @media( min-width: $breakpoint-md-min ) {
+          font-size: 13px;
+          padding-top: 40px;
+        }
+
+        @media( min-width: $breakpoint-lg-min ) {
+          font-size: 14px;
+          padding-top: 50px;
+        }
+      }
+    }
+  }
+
+  &--highlights {
+    background-color: $color-alt;
+    padding-bottom: 30px;
+
+    @media( min-width: $breakpoint-md-min ) {
+      padding-bottom: 60px;
+    }
+
+    @media( min-width: $breakpoint-lg-min ) {
+      padding-bottom: 88px;
+    }
+
+    &.animate--go {
+      article {
+        @media( min-width: $breakpoint-lg-min ) {
+          animation: fade-in .8s 1 forwards;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 30px;
+
+      @media( min-width: $breakpoint-lg-min ) {
+        margin-bottom: 60px;
+      }
+    }
+
+    .highlights {
+      &__wrap {
+        width: 100%;
+
+        @media( min-width: $breakpoint-lg-min ) {
+          max-width: 590px;
+        }
+
+        @media( min-width: $breakpoint-xl-min ) {
+          max-width: 670px;
+        }
+
+        .row {
+          margin: 0;
+
+          @media( min-width: $breakpoint-sm-min ) {
+            margin: 0 -30px;
+          }
+
+          @media( min-width: $breakpoint-lg-min ) {
+            margin: 0;
+          }
+        }
+      }
+
+      &__image {
+        width: calc( 100% - 600px );
+
+        @media( min-width: $breakpoint-xl-min ) {
+          width: calc( 100% - 670px );
+        }
+      }
+
+      &__article {
+        padding-bottom: 30px;
+
+        @media screen and ( min-width: $breakpoint-lg-min ) and (prefers-reduced-motion: no-preference) {
+           opacity: 0;
+        }
+
+        @media( min-width: $breakpoint-sm-min ) {
+          max-width: 50%;
+          padding: 0 30px 40px 30px;
+        }
+
+        @media( min-width: $breakpoint-lg-min ) {
+          max-width: 260px;
+          padding: 0 0 40px 0;
+        }
+
+        @media( min-width: $breakpoint-xl-min ) {
+          max-width: 280px;
+          padding-bottom: 60px;
+        }
+
+        $n: 6;
+
+        @for $x from 2 through $n {
+          &:nth-child(#{$x}) {
+            animation-delay: 120ms * ($x - 1);
+          }
+        }
+      }
+    }
+
+    .btn {
+      @media( min-width: $breakpoint-lg-min ) {
+        margin-top: -10px;
+      }
+    }
+  }
+
+  &--team {
+    overflow-x: hidden;
+    position: relative;
+
+    h2 {
+      color: $color-black-alt;
+      margin-bottom: 20px;
+
+      @media( min-width: $breakpoint-sm-min ) {
+        margin-bottom: 0;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &--photo-grid {
+    background-color: $color-alt;
+
+    &.animate--go {
+      .photo-grid {
+        &__item {
+          @media( min-width: $breakpoint-md-min ) {
+            &:nth-child(2) {
+              animation: fade-in-left .8s .2s 1 forwards;
+            }
+
+            &:nth-child(3) {
+              animation: fade-in-right .8s .5s 1 forwards;
+            }
+
+            &:nth-child(4) {
+              animation: fade-in-up .8s .7s 1 forwards;
+            }
+          }
+        }
+      }
+    }
+
+    h2 {
+      @media( min-width: $breakpoint-sm-min ) {
+        padding-left: 20px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    .photo-grid {
+      &__item {
+        padding-bottom: 25px;
+
+        @media( min-width: $breakpoint-sm-min ) {
+          max-width: 50%;
+        }
+
+        @media( min-width: $breakpoint-md-min ) {
+          &:not(:first-child) {
+            opacity: 0;
+          }
+        }
+
+        @media( min-width: $breakpoint-lg-min ) {
+          padding-bottom: 30px;
+          width: auto;
+        }
+
+        @media( min-width: $breakpoint-xl-min ) {
+          padding-bottom: 80px;
+        }
+
+        img {
+          display: block;
+          margin: 0 auto;
+
+          @media( min-width: $breakpoint-lg-min ) {
+            max-width: none;
+          }
+        }
+
+        &:last-child {
+          img {
+            @media( min-width: $breakpoint-sm-min ) {
+              width: 87%;
+            }
+
+            @media( min-width: $breakpoint-lg-min ) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

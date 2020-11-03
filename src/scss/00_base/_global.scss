@@ -1,0 +1,38 @@
+body {
+  background-color: $color-white;
+  color: $color-black;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.skip-to-content-link {
+  position: absolute;
+  transform: translateY(-100%);
+
+  &:focus-visible {
+    transform: translateY(0%);
+    z-index: 9999;
+  }
+}
+
+.skip-content-anchor {
+  display: block;
+  position: relative;
+  top: -130px;
+  visibility: hidden;
+}
+
+::-moz-selection {
+  background: $color-primary;
+  color: $color-white;
+}
+::selection {
+  background: $color-primary;
+  color: $color-white;
+}
